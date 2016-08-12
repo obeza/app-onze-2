@@ -1,0 +1,11 @@
+<p>
+  sondages works!
+</p>
+<md-card>
+   HELLO - Basic card.
+   <button md-raised-button (click)="clicked()">RAISED</button>
+</md-card>
+<md-spinner *ngIf="loading"></md-spinner>
+<ul *ngIf="!loading">
+  <li *ngFor="let movie of moviesList">{{ movie.title }}</li>
+</ul>
