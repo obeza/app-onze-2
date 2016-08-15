@@ -1,3 +1,19 @@
-<p>
-  sondage-ajouter works!
-</p>
+<form (ngSubmit)="formSubmit()">
+
+<md-card>
+
+  <md-toolbar color="primary">Ajouter un sondage</md-toolbar>
+  <div class="space"></div>
+  <md-card-content>
+      <md-input [(ngModel)]="sondageForm.titre" id="titre" name="titre" class="input-full" placeholder="Le titre du sondage" type="titre" required></md-input>
+  </md-card-content>
+  <md-card-content>
+      <md-input [(ngModel)]="sondageForm.desc" id="desc" name="desc" class="login-input" placeholder="Une description" type="desc" class="input-full"></md-input>
+  </md-card-content>
+  <md-card-content class="input-submit">
+      <button md-raised-button color="primary" type="submit" >Ajouter</button>
+  </md-card-content>
+  
+</md-card>
+
+</form>

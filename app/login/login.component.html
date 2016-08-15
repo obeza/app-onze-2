@@ -1,0 +1,21 @@
+<form (ngSubmit)="loginSubmit()"  autocomplete="off">
+
+  <md-card class="login">
+    <div class="login-titre">Bienvenue</div>     
+
+    <md-input [(ngModel)]="loginForm.email" id="email" name="email" class="login-input" placeholder="Email" type="email" required></md-input>
+
+    <md-input [(ngModel)]="loginForm.motdepasse" id="motdepasse" name="motdepasse" class="login-input" placeholder="Mot de passe" type="password" required></md-input>
+
+      <md-card-actions layout="row" layout-align="end center">
+            <button md-button>un oubli ?</button>
+            <button md-raised-button color="primary" type="submit">Se connecter</button>
+      </md-card-actions>  
+
+
+    
+  </md-card>
+
+</form>
+
+{{ loginForm | json }}

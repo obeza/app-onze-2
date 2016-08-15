@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SondageAjouterComponent implements OnInit {
 
+  public sondageForm = {};
   constructor() { }
 
   ngOnInit() {
+  }
+
+
+  formSubmit(){
+    console.log( this.sondageForm)
   }
 
 }
