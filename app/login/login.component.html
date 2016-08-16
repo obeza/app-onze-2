@@ -1,20 +1,30 @@
 <form (ngSubmit)="loginSubmit()"  autocomplete="off">
 
-  <md-card class="login">
-    <div class="login-titre">Bienvenue</div>     
 
-    <md-input [(ngModel)]="loginForm.email" id="email" name="email" class="login-input" placeholder="Email" type="email" required></md-input>
+    <div class="col-md-4 col-md-offset-4 col-sm-4 col-sm-offset-4">
 
-    <md-input [(ngModel)]="loginForm.motdepasse" id="motdepasse" name="motdepasse" class="login-input" placeholder="Mot de passe" type="password" required></md-input>
+<div class="panel panel-primary">
+  <div class="panel-heading"><h2>Bienvenue</h2></div>
+  <div class="panel-body">
 
-      <md-card-actions layout="row" layout-align="end center">
-            <button md-button>un oubli ?</button>
-            <button md-raised-button color="primary" type="submit">Se connecter</button>
-      </md-card-actions>  
+    <div class="form-group">
+        <label for="exampleInputEmail1">Votre email</label>
+        <input [(ngModel)]="loginForm.email" id="email" name="email"  class="form-control" placeholder="Email" type="email" required>     
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Votre mot de passe</label>
+        <input [(ngModel)]="loginForm.motdepasse" id="motdepasse" name="motdepasse"  class="form-control" placeholder="Mot de passe" type="password" required>     
+    </div>
+     <button class="btn btn-primary btn-lg btn-block" class="btn btn-primary btn-lg btn-block" type="submit">Se connecter</button>
+
+  </div>
+</div>
 
 
-    
-  </md-card>
+    </div>
+
+
+
 
 </form>
 

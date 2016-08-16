@@ -1,16 +1,26 @@
-<md-card>
-  <md-card-title>Les sondages         <button md-mini-fab>
-   
-   <md-icon color="accent">add</md-icon>
-</button></md-card-title>  
- 
-  <md-spinner *ngIf="loading"></md-spinner>
-  <div *ngIf="!loading">
-    <div class="list-item" *ngFor="let movie of moviesList">
-      <h3 class="list-item-titre">{{ movie.titre }}</h3>
-      <p class="list-item-desc"> {{ movie.desc }} </p>
-    </div>
-  </div>
 
-</md-card>
+    <div class="col-md-10 col-md-offset-1">
+
+      <div class="panel panel-primary">
+        <div class="panel-heading"><h2>Les sondages</h2></div>
+        <div class="panel-body">
+          
+          <div class="list-group" *ngIf="!loading">
+            <a 
+              *ngFor="let movie of moviesList"
+              href="#" 
+              class="list-group-item"
+            >
+              <h3>{{ movie.titre }}</h3>
+               <p> {{ movie.description }} </p>
+            </a>
+
+          </div>
+
+        </div>
+      </div>
+
+
+    </div>
+
 

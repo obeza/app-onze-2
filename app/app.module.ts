@@ -18,19 +18,21 @@ import { MdRadioModule } from '@angular2-material/radio';
 import { MdToolbarModule } from '@angular2-material/toolbar';
 */
 /* import mes services */
-import { MoviesService } from './services/movies.service';
+import { SondagesService } from './services/sondages.service';
 import { routing } from './app.routing';
 
 /* import mes component */
 import { SondagesComponent } from './sondages/sondages.component';
 import { SondageAjouterComponent } from './sondage-ajouter/sondage-ajouter.component';
 import { LoginComponent } from './login/login.component';
+import { SondagesModifierComponent } from './sondages-modifier/sondages-modifier.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SondagesComponent,
-    LoginComponent
+    LoginComponent,
+    SondagesModifierComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +45,7 @@ import { LoginComponent } from './login/login.component';
     HttpModule, routing
   ],
   providers: [
-     MoviesService
+     SondagesService
   ],
   entryComponents: [AppComponent],
   bootstrap: [AppComponent]

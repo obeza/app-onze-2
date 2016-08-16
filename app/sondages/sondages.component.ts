@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { MoviesService } from './../services/movies.service';
+import { SondagesService } from './../services/sondages.service';
 
 @Component({
   selector: 'app-sondages',
   templateUrl: 'sondages.component.html',
   styleUrls: ['sondages.component.css'],
-  providers:[MoviesService]
+  providers:[SondagesService]
 })
 export class SondagesComponent implements OnInit {
 
@@ -13,7 +13,7 @@ export class SondagesComponent implements OnInit {
   public titre:string;
   public loading = true;
 
-  constructor( private moviesService:MoviesService ) { 
+  constructor( private _sondagesService:SondagesService ) { 
 
   }
 
@@ -24,7 +24,7 @@ export class SondagesComponent implements OnInit {
 
   loadMovies(){
     this.titre = "Hello";
-    this.moviesService.get()
+    this._sondagesService.get()
       .subscribe( 
         data => { 
           this.moviesList = data,
